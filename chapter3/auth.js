@@ -1,5 +1,5 @@
 // TODO: make setupAuth depend on the Config service...
-function setupAuth(User, app) {
+function setupAuth(User, app, Config) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
 
@@ -18,8 +18,8 @@ function setupAuth(User, app) {
   passport.use(new FacebookStrategy(
     {
       // TODO: and use the Config service here
-      clientID: process.env.FACEBOOK_CLIENT_ID,
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      clientID:  Config.facebookClientId,   //process.env.FACEBOOK_CLIENT_ID,
+      clientSecret:  Config.facebookClientSecret, //process.env.FACEBOOK_CLIENT_SECRET,
       callbackURL: 'http://localhost:3000/auth/facebook/callback'
     },
     function(accessToken, refreshToken, profile, done) {

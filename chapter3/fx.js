@@ -3,9 +3,10 @@ var _ = require('underscore');
 
 // TODO: Make this function depend on the Config service from `dependencies.js`
 // and use Config.openExchangeRatesKey instead of an environment variable.
-module.exports = function() {
+module.exports = function(Config) {
   var url = 'http://openexchangerates.org/api/latest.json?app_id=' +
-    process.env.OPEN_EXCHANGE_RATES_KEY;
+  Config.openExchangeRatesKey;  // process.env.OPEN_EXCHANGE_RATES_KEY;
+  
   var rates = {
     USD: 1,
     EUR: 1.1,

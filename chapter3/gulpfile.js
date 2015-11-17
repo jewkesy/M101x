@@ -5,7 +5,7 @@ gulp.task('test', function() {
   var error = false;
   gulp.
     src('./test.js').
-    pipe(mocha()).
+    pipe(mocha({reporter: 'nyan'})).
     on('error', function() {
       console.log('Tests failed!');
       error = true;
