@@ -131,7 +131,10 @@ exports.SearchBarController = function($scope, $http) {
   // `/api/v1/product/text/:searchText` and expose the response's
   // `products` property as `results` to the scope.
   $scope.update = function() {
-    throw 'Not implemented!';
+    var txt = encodeURIComponent($scope.searchText);
+    $http.get('/api/v1/product/text/' + txt).success(function(data) {
+      $scope.results = data.products;
+    })
   };
 
   setTimeout(function() {
