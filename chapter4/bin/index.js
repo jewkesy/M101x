@@ -132,12 +132,13 @@ exports.SearchBarController = function($scope, $http) {
   // `/api/v1/product/text/:searchText` and expose the response's
   // `products` property as `results` to the scope.
   $scope.update = function() {
-    var q = encodeURIComponent($scope.searchText);
+    var encoded = encodeURIComponent($scope.searchText)
     $http.
-      get('/api/v1/product/text/' + q).
+      get('/api/v1/product/text/' + encoded).
       success(function(data) {
         $scope.results = data.products;
-      });
+    });
+    // throw 'Not implemented!';
   };
 
   setTimeout(function() {

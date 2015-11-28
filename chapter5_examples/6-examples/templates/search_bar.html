@@ -1,0 +1,18 @@
+<!--
+TODO: this HTML should expose a search bar
+!-->
+
+<div class="search-bar-wrapper">
+  <div>
+    <input  type="text" class="search-bar-input"
+            placeholder="Search for Products"
+            ng-model="searchText" ng-change="update()" />
+  </div>
+  <div class="autocomplete-results" ng-show="results.length > 0">
+    <div class="autocomplete-result" ng-repeat="result in results">
+      <a ng-href="#/product/{{result._id}}">
+        {{result.name}}
+      </a>
+    </div>
+  </div>
+</div>
