@@ -17,3 +17,8 @@ Which of the following is not true about the relationship between Angular UI Rou
 	They both use URLs to uniquely identify views  
 	They both associate a template and a controller with a view  
 X	They both use the same service for route parameters 
+
+
+HOMEWORK 5.3
+
+ionic bonds

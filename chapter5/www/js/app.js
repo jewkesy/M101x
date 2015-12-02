@@ -103,7 +103,7 @@ angular.module('starter', ['templates', 'mean-retail.components',
   .state('tab.search', {
     url: '/search',
     views: {
-      'tab-search': {
+      'tab-category': {
         templateUrl: 'templates/tab-search.html'
       }
     }
