@@ -136,8 +136,7 @@ exports.SearchBarController = function($scope, $http) {
       get('/api/v1/product/text/' + encoded).
       success(function(data) {
         $scope.results = data.products;
-    });
-    // throw 'Not implemented!';
+      });
   };
 
   setTimeout(function() {

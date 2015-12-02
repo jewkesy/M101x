@@ -15,3 +15,7 @@ Which of the following $http calls violates the same-origin policy for HTTP requ
 	$http.get('//localhost:3000/test')  
 X	$http.get('http://localhost:8080/test')
 	$http.get('test')
+
+HOMEWORK 4.3
+
+angular momentum
